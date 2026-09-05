@@ -24,7 +24,7 @@ export default function App() {
   // TODO 2: create the `filter` state, starting as "All".
   //         Later, wrap it in the lazy initializer that reads from localStorage.
   const [filter, setFilter] = useState(()=> {
-    return localStorage.getItem("filter") || "all";
+    return localStorage.getItem("filter") || "All";
   })
 
   // TODO 3: add useEffect to persist `recipes` to localStorage whenever it changes.
@@ -69,7 +69,7 @@ export default function App() {
   // TODO 9: derive `visibleRecipes` in render — if filter === "All" show all,
   //         otherwise filter by category. Do NOT store this in state.
   const visibleRecipes = recipes.filter((recipe) => {
-    if (filter === "all") {
+    if (filter === "All") {
       return true;
     }
     return recipe.category.toLowerCase () === filter.toLowerCase();
