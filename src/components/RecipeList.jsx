@@ -1,6 +1,6 @@
 import RecipeCard from "./RecipeCard";
 
-export default function RecipeList({ recipes, onToggleFavorite, onDelete }) {
+export default function RecipeList({ recipes, onToggleFavorite, onDeleteRecipe, }) {
   // TODO: if recipes.length === 0, render a friendly empty-state message
   //       (e.g., "No recipes match this filter.").
   if (recipes.length === 0) {
@@ -23,8 +23,8 @@ export default function RecipeList({ recipes, onToggleFavorite, onDelete }) {
           category = {recipe.category}
           time = {recipe.time}
           favorite = {recipe.favorite}
-          onToggleFavorite = {onToggleFavorite}
-          onDelete = {onDelete}
+          onToggleFavorite = {() => onToggleFavorite(recipe.id)}
+          onDelete = {() => onDeleteRecipe(recipe.id)}
           />
       ))}
     </div>

@@ -27,8 +27,9 @@ export default function RecipeCard({ id, title, category, time, favorite, onTogg
 
         <div className="card-actions justify-end mt-3">
           {/* TODO: Delete button (btn btn-error btn-sm) that calls onDelete(id) */}
-          <button className="btn btn-sm btn-error" onClick={onDelete(id)}>Delete</button>
-
+          <button className="btn btn-sm btn-error" onClick={() => onDelete(id)}>
+            Delete
+          </button>
         </div>
       </div>
     </div>

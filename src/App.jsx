@@ -46,7 +46,9 @@ export default function App() {
   // TODO 6: write handleAdd(recipe) — adds a new recipe with a unique id (Date.now()).
   //         Use the spread operator, NOT .push().
   const handleAddRecipe = (newRecipe) => {
-    setRecipes([...recipes, newRecipe]);
+    setRecipes([...recipes, { ...newRecipe, id: Date.now(),
+    },
+  ]);
   };
 
   // TODO 7: write handleToggleFavorite(id) — flips the `favorite` field of the matching recipe.
@@ -95,12 +97,6 @@ export default function App() {
         onToggleFavorite={handleToggleFavorite} 
         onDeleteRecipe={handleDeleteRecipe} />
 
-        <div className="alert alert-info">
-          <span>
-            Delete this alert once you have wired up your components. Then run{" "}
-            <code className="font-mono">npm run dev</code> and check the browser.
-          </span>
-        </div>
       </div>
     </div>
   );
