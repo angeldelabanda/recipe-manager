@@ -89,7 +89,7 @@ export default function App() {
 
         <RecipeForm onAdd={handleAddRecipe} />
 
-        {/* <SummaryBar total={...} favorites={...} /> */}
+        <SummaryBar total={recipes.length} favorites={recipes.filter((recipe) => recipe.favorite).length} />
 
         <CategoryFilter activeFilter={filter} onFilterChange={setFilter} />
 
