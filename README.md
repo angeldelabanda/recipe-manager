@@ -1,5 +1,8 @@
 # Recipe Manager — Starter Template
 
+![ss](image.png)
+
+
 Starter scaffold for **PD 2 Major Assessment 1 — Interactive Recipe Manager**. Vite, React 19, Tailwind CSS, and DaisyUI are all pre-installed and configured. Your job is to fill in the TODO comments across `src/App.jsx` and `src/components/`.
 
 ---
