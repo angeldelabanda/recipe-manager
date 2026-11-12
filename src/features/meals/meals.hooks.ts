@@ -1,5 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { searchMeals, getCategories } from "./meals.api";
+
 export function useSearchMeals(term: string) {
  return useQuery({
  queryKey: ["meals", term],
@@ -7,6 +8,7 @@ export function useSearchMeals(term: string) {
  enabled: term.length > 0,
  });
 }
+
 export function useCategories() {
  return useQuery({
  queryKey: ["categories"],
