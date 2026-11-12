@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Recipe } from "@/features/meals/meals.types";
 
 interface MealCardProps {
@@ -24,7 +25,11 @@ export default function MealCard({
       </figure>
 
       <div className="card-body">
-        <h2 className="card-title text-base">{title}</h2>
+        <h2 className="card-title text-base">
+  <Link to={`/recipe/${meal.mealId}`} className="hover:underline">
+    {title}
+  </Link>
+</h2>
 
         <div className="flex gap-2">
           <span className="badge badge-primary">{category}</span>
